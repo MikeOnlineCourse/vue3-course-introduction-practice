@@ -1,10 +1,10 @@
 <script setup>
-import SetupDemo from "./components/02-setup.vue";
+import ComponentDemo from "./components/13-key.vue";
 </script>
 
 <template>
   <div>
-    <SetupDemo />
+    <ComponentDemo />
   </div>
 </template>
 

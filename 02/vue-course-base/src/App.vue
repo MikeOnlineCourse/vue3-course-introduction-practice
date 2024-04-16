@@ -1,36 +1,10 @@
 <script setup>
-import { ref, reactive, watch } from "vue";
-
-const title = ref("Vue3 Hello World!");
-const userInfo = reactive({
-  name: "Mike",
-  age: 12,
-  email: "",
-});
-
-setTimeout(() => {
-  title.value = "Updated";
-  userInfo.email = "1208966@gmail.com";
-}, 2000);
-
-watch(title, (newName) => {
-  console.log("new title", newName);
-});
-
-watch(
-  () => userInfo.email,
-  (newEmail) => {
-    console.log("new user email", newEmail);
-  }
-);
+import SetupDemo from "./components/02-setup.vue";
 </script>
 
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <pre>
-      {{ userInfo }}
-    </pre>
+    <SetupDemo />
   </div>
 </template>
 

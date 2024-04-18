@@ -1,5 +1,5 @@
 <script setup>
-import ComponentDemo from "./components/23-MoreModifiers.vue";
+import ComponentDemo from "./components/24-api.vue";
 </script>
 
 <template>

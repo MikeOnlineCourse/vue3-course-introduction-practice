@@ -1,5 +1,3 @@
-<script setup></script>
-<template>
-  <div></div>
-</template>
-<style></style>
+<script setup src="./script.js"></script>
+<template src="./template.html"></template>
+<style src="./style.css"></style>

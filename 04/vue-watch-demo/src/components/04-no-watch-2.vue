@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onMounted, ref } from "vue";
 import axios from "axios";
 
 const coursesArr = ref([]);
@@ -25,12 +25,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="flex-between">
-    <a
-      class="card"
-      v-for="item in targetCoursesArr"
-      :key="item.id"
-      @click="getDetalData(item.id)"
-    >
+    <a class="card" v-for="item in targetCoursesArr" :key="item.id" @click="getDetalData(item.id)">
       <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
 
       <img :src="item.photo" alt="" />
@@ -50,9 +45,7 @@ onMounted(() => {
     </a>
   </div>
 
-  <button v-show="targetCoursesArr.length !== 3" @click="getDetalData(0)">
-    Back
-  </button>
+  <button v-show="targetCoursesArr.length !== 3" @click="getDetalData(0)">Back</button>
 </template>
 
 <style>

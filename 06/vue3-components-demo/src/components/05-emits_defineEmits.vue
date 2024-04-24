@@ -1,5 +1,37 @@
-<script setup></script>
+<script setup>
+import axios from "axios";
+import { onMounted, ref } from "vue";
+import CardBox from "./05/CardBox.vue";
+
+const coursesArr = ref([]);
+
+const handleClickCard = (id) => {
+  console.log("id=>", id);
+};
+
+const handleMore = (path) => {
+  console.log("path=>", path);
+};
+
+onMounted(() => {
+  axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
+    coursesArr.value = res.data;
+  });
+});
+</script>
 <template>
-  <div></div>
+  <div class="flex-between mt-40px">
+    <CardBox :coursesArr="coursesArr" @onClickCard="handleClickCard" @onMore="handleMore" />
+  </div>
 </template>
-<style></style>
+<style scoped>
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.mt-40px {
+  margin-top: 40px;
+}
+</style>

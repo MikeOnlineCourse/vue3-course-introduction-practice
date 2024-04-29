@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/02-useSlots.vue";
+import DemoComponent from "./components/08-svg.vue";
 </script>
 
 <template>
@@ -16,7 +16,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: cornsilk;
+  background-color: rgb(56, 56, 56);
 }
 li {
   list-style-type: none;

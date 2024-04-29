@@ -29,12 +29,14 @@ h1.title {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 h1.title > img {
   margin-right: 10px;
 }
 p {
   font-size: 20px;
+  color: #fff;
 }
 .content {
   margin-bottom: 50px;

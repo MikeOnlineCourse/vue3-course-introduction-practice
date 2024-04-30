@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/10-handle_error_state.vue";
+import DemoComponent from "./components/09-defineAsyncComponent.vue";
 </script>
 
 <template>

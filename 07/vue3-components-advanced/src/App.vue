@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/08-svg.vue";
+import DemoComponent from "./components/09-defineAsyncComponent.vue";
 </script>
 
 <template>

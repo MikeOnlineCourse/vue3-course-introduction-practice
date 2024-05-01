@@ -1,5 +1,5 @@
 <script setup>
-import ComponentDemo from "./components/24-api.vue";
+import ComponentDemo from "./components/25-Element.vue";
 </script>
 
 <template>

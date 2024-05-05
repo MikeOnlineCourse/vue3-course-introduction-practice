@@ -12,6 +12,9 @@ const title = computed<string>(() => {
     <h1>
       {{ name }}
     </h1>
+    <h1>
+      {{ title }}
+    </h1>
   </div>
 </template>
 <style></style>

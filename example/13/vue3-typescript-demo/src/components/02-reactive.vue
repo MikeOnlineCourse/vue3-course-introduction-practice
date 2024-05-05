@@ -14,6 +14,8 @@ const user: TUser = reactive({
 });
 </script>
 <template>
-  <div></div>
+  <div>
+    {{ user }}
+  </div>
 </template>
 <style></style>

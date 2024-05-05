@@ -1,7 +1,12 @@
 <script setup></script>
 <template>
   <div>
-    <h1>About Page</h1>
+    <h1>關於我們</h1>
   </div>
 </template>
-<style></style>
+<style scoped>
+h1 {
+  color: #fff;
+  font-size: 200px;
+}
+</style>

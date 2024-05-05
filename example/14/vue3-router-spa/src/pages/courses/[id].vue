@@ -14,11 +14,9 @@ const goBack = () => {
 };
 
 onMounted(() => {
-  axios
-    .get(`https://vue-lessons-api.vercel.app/courses/${route.params.id}`)
-    .then((res) => {
-      courses.value = res.data.data[0];
-    });
+  axios.get(`https://vue-lessons-api.vercel.app/courses/${route.params.id}`).then((res) => {
+    courses.value = res.data.data[0];
+  });
 });
 </script>
 <template>
@@ -38,11 +36,16 @@ onMounted(() => {
 }
 img {
   margin-bottom: 20px;
+  width: 100%;
+  height: 346px;
+  background-color: #555;
 }
 p {
+  display: block;
   font-size: 20px;
   color: #fff;
   line-height: 38px;
+  height: 152px;
 }
 .content {
   width: 704px;

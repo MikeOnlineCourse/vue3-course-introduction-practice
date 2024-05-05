@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../pages/index.vue";
+import NotFound from "../pages/NotFound.vue";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -12,6 +13,34 @@ const router = createRouter({
       path: "/courses/:id",
       component: () => import("../pages/courses/[id].vue"),
     },
+    {
+      name: "member",
+      path: "/member",
+      component: () => import("../pages/member.vue"),
+      children: [
+        {
+          name: "member",
+          path: "",
+          component: () => import("../pages/member/index.vue"),
+        },
+        {
+          name: "higher",
+          path: "higher",
+          component: () => import("../pages/member/higher.vue"),
+        },
+        {
+          name: "medium",
+          path: "medium",
+          component: () => import("../pages/member/medium.vue"),
+        },
+        {
+          name: "lowLevel",
+          path: "lowLevel",
+          component: () => import("../pages/member/lowLevel.vue"),
+        },
+      ],
+    },
+    { path: "/:pathMatch(.*)*", component: NotFound },
   ],
 });
 

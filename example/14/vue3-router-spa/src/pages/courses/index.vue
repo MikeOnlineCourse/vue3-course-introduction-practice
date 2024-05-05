@@ -19,13 +19,19 @@ onMounted(() => {
 </script>
 <template>
   <div class="box">
-    <div class="flex-around w-1000px">
-      <a
-        class="card"
-        v-for="item in coursesArr"
-        :key="item.id"
-        @click="gotoCourses(item.id)"
-      >
+    <div v-if="coursesArr.length === 0" class="flex-around w-1000px">
+      <a class="card bg-gray-ddd">
+        <div class="sk-img"></div>
+      </a>
+      <a class="card bg-gray-ddd">
+        <div class="sk-img"></div>
+      </a>
+      <a class="card bg-gray-ddd">
+        <div class="sk-img"></div>
+      </a>
+    </div>
+    <div v-else class="flex-around w-1000px">
+      <a class="card" v-for="item in coursesArr" :key="item.id" @click="gotoCourses(item.id)">
         <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
         <img :src="item.photo" alt="" />
         <div class="content">
@@ -78,6 +84,16 @@ a.card {
   transition: opacity 0.2s;
   background-color: rgb(249, 249, 249);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bg-gray-ddd {
+  background-color: #fff !important;
+}
+
+.sk-img {
+  width: 100%;
+  height: 155px;
+  background-color: #ddd;
 }
 a.card:hover {
   opacity: 1;

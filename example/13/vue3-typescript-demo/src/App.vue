@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DemoComponents from "./components/09-CardList.vue";
+</script>
 
 <template>
-  <div></div>
+  <div>
+    <DemoComponents />
+  </div>
 </template>
 
 <style>

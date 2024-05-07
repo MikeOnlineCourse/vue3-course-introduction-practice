@@ -1,0 +1,10 @@
+{
+  "cancel": "cancel",
+  "email": "email",
+  "date": "date",
+  "subject": "subject",
+  "message": "message",
+  "upload": "upload",
+  "context": "Hello everyone, I am {name}. Today's class was very interesting, and I learned a lot.",
+  "getCount": "You earned {0} points today, and you have {1} days until expiration."
+}

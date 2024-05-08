@@ -1,9 +1,4 @@
 <script setup>
-import { ref, watch } from "vue";
-import { useRouter, useRoute } from "vue-router";
-
-import RadioType from "../components/RadioType/index.vue";
-
 const route = useRoute();
 
 const router = useRouter();

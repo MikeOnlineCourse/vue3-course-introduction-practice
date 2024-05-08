@@ -1,6 +1,4 @@
 <script setup>
-import { onMounted, ref } from "vue";
-import { useRoute, useRouter } from "vue-router";
 import axios from "axios";
 
 const route = useRoute();
@@ -14,9 +12,11 @@ const goBack = () => {
 };
 
 onMounted(() => {
-  axios.get(`https://vue-lessons-api.vercel.app/courses/${route.params.id}`).then((res) => {
-    courses.value = res.data.data[0];
-  });
+  axios
+    .get(`https://vue-lessons-api.vercel.app/courses/${route.params.id}`)
+    .then((res) => {
+      courses.value = res.data.data[0];
+    });
 });
 </script>
 <template>

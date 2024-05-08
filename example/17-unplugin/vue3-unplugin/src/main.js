@@ -1,3 +1,4 @@
+import "virtual:svg-icons-register";
 import { createApp } from "vue";
 import { createI18n } from "vue-i18n";
 import App from "./App.vue";

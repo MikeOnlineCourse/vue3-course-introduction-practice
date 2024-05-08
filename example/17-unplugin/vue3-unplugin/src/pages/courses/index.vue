@@ -1,6 +1,4 @@
 <script setup>
-import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
 import axios from "axios";
 
 const router = useRouter();
@@ -31,7 +29,12 @@ onMounted(() => {
       </a>
     </div>
     <div v-else class="flex-around w-1000px">
-      <a class="card" v-for="item in coursesArr" :key="item.id" @click="gotoCourses(item.id)">
+      <a
+        class="card"
+        v-for="item in coursesArr"
+        :key="item.id"
+        @click="gotoCourses(item.id)"
+      >
         <p class="more" @click.stop="openUrl(item.moreUrl)">
           {{ $t("watchMore") }}
         </p>

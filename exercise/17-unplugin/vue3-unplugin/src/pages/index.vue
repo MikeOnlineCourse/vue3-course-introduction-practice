@@ -2,6 +2,7 @@
 <template>
   <div>
     <h1>
+      <SvgIcon name="vue" />
       {{ $t("home") }}
     </h1>
   </div>

@@ -1,0 +1,17 @@
+{
+  "home": "Home",
+  "courses": "Course List",
+  "member": "Member Area",
+  "about": "About Us",
+  "address": "Contact Us",
+  "notFound": "Page Not Found",
+  "higher": "Premium Member",
+  "lowLevel": "General Member",
+  "medium": "Medium Member",
+  "type_higher": "Premium",
+  "type_lowLevel": "General",
+  "type_medium": "Medium",
+  "default": "Default Member",
+  "return": "Return",
+  "watchMore": "Watch More"
+}

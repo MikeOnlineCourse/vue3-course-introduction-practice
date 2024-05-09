@@ -1,0 +1,17 @@
+{
+  "home": "首頁",
+  "courses": "課程列表",
+  "member": "會員專區",
+  "about": "關於我們",
+  "address": "聯絡我們",
+  "notFound": "找不到頁面",
+  "higher":"高級會員",
+  "lowLevel":"一般會員",
+  "medium":"中等會員",
+  "type_higher":"高級",
+  "type_lowLevel":"一般",
+  "type_medium":"中等",
+  "default":"預設會員",
+  "return":"返回",
+  "watchMore":"觀看更多"
+}

@@ -1,14 +1,11 @@
 <script setup>
 import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
 import axios from "axios";
-
-const router = useRouter();
 
 const coursesArr = ref([]);
 
 const gotoCourses = (id) => {
-  router.push(`/courses/${id}`);
+  console.log(id);
 };
 
 onMounted(() => {

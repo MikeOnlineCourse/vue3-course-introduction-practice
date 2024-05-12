@@ -1,9 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 
-const name = ref<string>("Mike");
-const count1 = ref<number | string>(0);
-const count2 = ref<number | string>("1");
+const name = ref("Mike");
+const count1 = ref(0);
+const count2 = ref("1");
 </script>
 <template>
   <div>

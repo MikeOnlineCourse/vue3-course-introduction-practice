@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref } from "vue";
 
 const listArr = ref([
   { id: 1, name: "mike" },
@@ -10,14 +10,6 @@ const listArr = ref([
   { id: 6, name: "mgi" },
 ]);
 
-const isShowList = computed(() => {
-  return listArr.value.length > 0;
-});
-
-const titleContent = computed(() => {
-  return listArr.value.length > 0 ? "以下是列表" : "目前沒有列表";
-});
-
 const closeList = (idx) => {
   listArr.value = listArr.value.filter((list, index) => index !== idx);
 };
@@ -25,9 +17,9 @@ const closeList = (idx) => {
 <template>
   <div>
     <h1>
-      {{ titleContent }}
+      {{ listArr.length > 0 ? "以下是列表" : "目前沒有列表" }}
     </h1>
-    <ul v-show="isShowList">
+    <ul v-show="listArr.length > 0">
       <li v-for="(list, idx) in listArr" :key="list.id">
         {{ list.name }}
         <button @click="closeList(idx)">X</button>

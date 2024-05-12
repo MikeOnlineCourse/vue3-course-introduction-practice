@@ -8,13 +8,5 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     FromLogin: typeof import('./components/FromLogin.vue')['default']
-    NAutoComplete: typeof import('naive-ui')['NAutoComplete']
-    NButton: typeof import('naive-ui')['NButton']
-    NCheckbox: typeof import('naive-ui')['NCheckbox']
-    NInput: typeof import('naive-ui')['NInput']
-    NInputNumber: typeof import('naive-ui')['NInputNumber']
-    NRadioButton: typeof import('naive-ui')['NRadioButton']
-    NRadioGroup: typeof import('naive-ui')['NRadioGroup']
-    NSpace: typeof import('naive-ui')['NSpace']
   }
 }

@@ -1,15 +1,16 @@
 <script setup>
 // https://vueuse.org/core/useClipboard/
 import { ref } from "vue";
-import { useClipboard } from "@vueuse/core";
 
 const source = ref("Hello");
 
-const { text, copy, copied, isSupported } = useClipboard();
+const text = ref("");
 
-const copyText = () => {
-  copy(source.value);
-};
+const isSupported = ref(true);
+
+const copied = ref(false);
+
+const copyText = () => {};
 </script>
 
 <template>

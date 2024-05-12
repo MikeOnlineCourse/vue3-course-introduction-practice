@@ -5,8 +5,7 @@ const coursesArr = ref([
     id: 286,
     name: "Vue3 高效入門與實踐",
     photo: `https://ik.imagekit.io/thecodingpro/mike-school/tr:w-1920,c-at_max/o/web%2F1700227376.jpg?alt=media&token=72ba7e9b-59ae-473e-8a1b-5de5a0b3ee5d`,
-    description:
-      "本課程將帶你一步步的學習理解  Vue3 每個重要的語法以及搭配 TypeScript 進行開發，讓同學們可以嘗試處理專案上面周邊技術的整合應用，以及體驗更真實的實際開發會遇到的問題情境。",
+    description: "本課程將帶你一步步的學習理解  Vue3 每個重要的語法以及搭配 TypeScript 進行開發，讓同學們可以嘗試處理專案上面周邊技術的整合應用，以及體驗更真實的實際開發會遇到的問題情境。",
     money: 2500,
     teacher: {
       name: "Mike",
@@ -23,14 +22,8 @@ const openUrl = (url) => {
 </script>
 <template>
   <div>
-    <a
-      class="card"
-      v-for="item in coursesArr"
-      :key="item.id"
-      href="#"
-      @click.prevent="openUrl(item.url)"
-    >
-      <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
+    <a class="card" v-for="item in coursesArr" :key="item.id" href="#" @click="openUrl(item.url)">
+      <p class="more" @click="openUrl(item.moreUrl)">觀看更多</p>
 
       <img :src="item.photo" alt="" />
       <div class="content">

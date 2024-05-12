@@ -16,20 +16,5 @@
     <h2 class="title2">這是一個副標題</h2>
   </div>
 </template>
-<style>
-.title2 {
-  font-size: 20px;
-  color: brown;
-}
-</style>
-<style scoped>
-.title {
-  font-size: 40px;
-  color: blue;
-}
 
-.title :deep(.text) {
-  color: steelblue;
-  font-size: 24px;
-}
-</style>
+<style></style>

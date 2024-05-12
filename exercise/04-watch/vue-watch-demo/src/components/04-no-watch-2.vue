@@ -6,11 +6,16 @@ const coursesArr = ref([]);
 
 const coursesId = ref(0);
 
-const targetCoursesArr = computed(() => {
-  if (coursesId.value === 0) {
-    return coursesArr.value;
+const targetCoursesArr = ref([]);
+
+watch(coursesId, (newVal) => {
+  if (newVal === 0) {
+    targetCoursesArr.value = coursesArr.value;
+    return;
   }
-  return coursesArr.value.filter((item) => item.id === coursesId.value);
+  targetCoursesArr.value = coursesArr.value.filter((item) => {
+    return item.id === newVal;
+  });
 });
 
 const getDetalData = (id) => {

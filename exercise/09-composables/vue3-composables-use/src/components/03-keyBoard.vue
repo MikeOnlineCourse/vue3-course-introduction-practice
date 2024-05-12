@@ -1,6 +1,5 @@
 <script setup>
-import { ref } from "vue";
-import { useKeyBoard } from "../composables/useKeyBoard.js";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const isShow = ref(false);
 
@@ -12,7 +11,19 @@ const closePopup = () => {
   isShow.value = false;
 };
 
-useKeyBoard("keyup", "Escape", closePopup);
+const handleKeyUp = (e) => {
+  if (e.code === "Escape") {
+    closePopup();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("keyup", handleKeyUp);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("keyup", handleKeyUp);
+});
 </script>
 <template>
   <div class="content flex-center">

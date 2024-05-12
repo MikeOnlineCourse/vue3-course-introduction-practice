@@ -11,25 +11,14 @@ const handleAlert = (bool) => {
   <div class="content">
     <button class="open" @click="handleAlert(true)">開啟</button>
 
-    <transition name="fade">
-      <div class="alert" v-if="isShow">
-        <h1>發生未知的錯誤</h1>
+    <div class="alert" v-if="isShow">
+      <h1>發生未知的錯誤</h1>
 
-        <button class="close" @click="handleAlert(false)">確認</button>
-      </div>
-    </transition>
+      <button class="close" @click="handleAlert(false)">確認</button>
+    </div>
   </div>
 </template>
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
 #app {
   width: 100%;
   height: 100%;

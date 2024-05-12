@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, watch } from "vue";
+import { ref, reactive } from "vue";
 
 const title = ref({
   name: "",
@@ -9,21 +9,6 @@ const userInfo = reactive({
   name: "Mike",
   age: 12,
   email: "",
-});
-
-watch(title.value, (newTitle) => {
-  console.log(newTitle);
-});
-
-watch(
-  () => title.value.name,
-  (newTitle) => {
-    console.log(newTitle);
-  }
-);
-
-watch(userInfo, (newInfo) => {
-  console.log(newInfo);
 });
 
 setTimeout(() => {

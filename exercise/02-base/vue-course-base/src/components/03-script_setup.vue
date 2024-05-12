@@ -1,6 +1,13 @@
-<script setup>
+<script>
 import { ref } from "vue";
-const title = ref("Vue3 Hello World!");
+export default {
+  setup() {
+    const title = ref("Vue3 Hello World!");
+    return {
+      title,
+    };
+  },
+};
 </script>
 
 <template>

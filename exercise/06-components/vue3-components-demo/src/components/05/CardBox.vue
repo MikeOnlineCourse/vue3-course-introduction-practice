@@ -6,16 +6,9 @@ const props = defineProps({
     required: true,
   },
 });
+const handleClickCard = (id) => {};
 
-const emit = defineEmits(["onClickCard", "onMore"]);
-
-const handleClickCard = (id) => {
-  emit("onClickCard", id);
-};
-
-const handleMore = (path) => {
-  emit("onMore", path);
-};
+const handleMore = (path) => {};
 </script>
 <template>
   <a class="card" v-for="item in coursesArr" :key="item.id" @click="handleClickCard(item.id)">

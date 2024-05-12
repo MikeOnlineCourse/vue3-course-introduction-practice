@@ -12,10 +12,12 @@ onMounted(() => {
   <div class="content">
     <div class="card" v-for="card in postCard" :key="card.id">
       <header>
-        <img class="avatar" v-src="card.avatar" />
+        <img class="avatar" :src="card.avatar" />
         <div>
           <h1>{{ card.name }}</h1>
-          <p v-timeformat="card.createdAt"></p>
+          <p>
+            {{ card.createdAt }}
+          </p>
         </div>
       </header>
       <p class="content">{{ card.content }}</p>

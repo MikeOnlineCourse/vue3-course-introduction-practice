@@ -3,13 +3,12 @@ import { ref } from "vue";
 
 const money = ref(0);
 
-// const formattedNumber = computed(() => money.value.toLocaleString());
+const formattedNumber = computed(() => money.value.toLocaleString());
 </script>
 <template>
   <div>
     <input v-model="money" type="number" placeholder="輸入個金額..." />
-    <!-- <h1>{{ formattedNumber }}</h1> -->
-    <h1 v-thousand="money"></h1>
+    <h1>{{ formattedNumber }}</h1>
   </div>
 </template>
 <style scoped>

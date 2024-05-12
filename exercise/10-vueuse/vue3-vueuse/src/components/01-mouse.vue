@@ -1,8 +1,8 @@
 <script setup>
-import { computed } from "vue";
-import { useMouse } from "@vueuse/core";
+import { computed, ref, onMounted, onUnmounted } from "vue";
 
-const { x, y } = useMouse();
+const x = ref(0);
+const y = ref(0);
 
 const flyX = computed(() => {
   return `${x.value - 300 / 2}px`;
@@ -10,6 +10,15 @@ const flyX = computed(() => {
 const flyY = computed(() => {
   return `${y.value - 168 / 2}px`;
 });
+
+const update = (e) => {
+  x.value = e.pageX;
+  y.value = e.pageY;
+};
+
+onMounted(() => window.addEventListener("mousemove", update));
+
+onUnmounted(() => window.removeEventListener("mousemove", update));
 </script>
 <template>
   <div class="content flex-center">

@@ -18,7 +18,7 @@ const listArr = ref([
 </script>
 <template>
   <ul>
-    <li v-for="list in listArr" :key="list.id">
+    <li v-for="list in listArr">
       <h1>
         {{ list.name }}
       </h1>

@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <div class="box">
     <div class="flex-around w-1000px">
-      <Teleport v-for="item in coursesArr" :disabled="coursesId !== item.id" to="#detal">
+      <div v-for="item in coursesArr">
         <a class="card" :key="item.id" @click="getDetal(item.id)">
           <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
           <img :src="item.photo" alt="" />
@@ -47,7 +47,7 @@ onMounted(() => {
           </div>
         </a>
         <button v-show="coursesId === item.id" @click="closePopup">關閉</button>
-      </Teleport>
+      </div>
     </div>
 
     <SelectData v-show="isOpen" />

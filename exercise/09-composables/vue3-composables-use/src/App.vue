@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/03-keyBoard.vue";
+import DemoComponent from "./components/01-mouse.vue";
 </script>
 
 <template>

@@ -1,8 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import axios from "axios";
-
-const isReg = ref(false);
 
 const registered = ref({
   username: "",
@@ -13,26 +10,8 @@ const registered = ref({
   terms: false,
 });
 
-const error_message = ref({});
-
-const successFn = () => {
-  alert("註冊成功");
-  isReg.value = true;
-};
-
-const errorFn = (err) => {
-  Object.keys(err).forEach((key) => (error_message.value[key] = err[key]));
-};
-
 const handRegisteredFn = () => {
-  axios
-    .post("https://vue-lessons-api.vercel.app/auth/registered", registered)
-    .then((res) => {
-      successFn();
-    })
-    .catch((err) => {
-      errorFn(err.response.data.error_message);
-    });
+  // https://vue-lessons-api.vercel.app/auth/registered
 };
 </script>
 <template>
@@ -40,31 +19,23 @@ const handRegisteredFn = () => {
     <div v-if="!isReg">
       <div class="input-box">
         <p>NAME</p>
-        <input
-          type="text"
-          placeholder="輸入使用者名稱"
-          v-model="registered.username"
-        />
-        <p v-if="error_message.username" class="error">
-          {{ error_message.username }}
+        <input type="text" placeholder="輸入使用者名稱" v-model="registered.username" />
+        <p class="error">
+          <!-- error message -->
         </p>
       </div>
       <div class="input-box">
         <p>PASSWORD</p>
-        <input
-          type="password"
-          placeholder="輸入密碼"
-          v-model="registered.password"
-        />
-        <p v-if="error_message.password" class="error">
-          {{ error_message.password }}
+        <input type="password" placeholder="輸入密碼" v-model="registered.password" />
+        <p class="error">
+          <!-- error message -->
         </p>
       </div>
       <div class="input-box">
         <p>E-MAIL</p>
         <input type="text" placeholder="輸入email" v-model="registered.email" />
-        <p v-if="error_message.email" class="error">
-          {{ error_message.email }}
+        <p class="error">
+          <!-- error message -->
         </p>
       </div>
       <div class="input-box">
@@ -78,17 +49,14 @@ const handRegisteredFn = () => {
         <label for="girl">girl</label>
       </div>
       <div class="input-box flex-center">
-        <input
-          class="mr-10px"
-          type="checkbox"
-          id="checkbox"
-          v-model="registered.terms"
-        />
+        <input class="mr-10px" type="checkbox" id="checkbox" v-model="registered.terms" />
         <label for="checkbox">我已閱讀使用者條款</label>
       </div>
       <a class="btn" @click="handRegisteredFn">送出</a>
     </div>
-    <div v-if="isReg">
+
+    <!-- success page -->
+    <div>
       <h1>註冊成功</h1>
     </div>
   </div>

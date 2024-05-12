@@ -1,25 +1,12 @@
 <script setup>
-import axios from "axios";
-import { ref, watch, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const twZip = ref({ city: [], area: [] });
 const city = ref("");
 const area = ref("");
 
-watch(city, (newVal) => {
-  const areaFilter = twZip.value.city.filter((list) => list.name === newVal);
-  area.value = "";
-  twZip.value.area = areaFilter[0].area;
-});
-
-const handSelect = () => {
-  console.log({ city: city.value, area: area.value });
-};
-
 onMounted(() => {
-  axios.get("https://vue-lessons-api.vercel.app/city/list").then((res) => {
-    twZip.value["city"] = res.data.twzip.city;
-  });
+  // https://vue-lessons-api.vercel.app/city/list
 });
 </script>
 <template>

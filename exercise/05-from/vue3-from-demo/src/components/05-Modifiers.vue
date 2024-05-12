@@ -18,15 +18,15 @@ watch(trimVal, (newVal) => {
 <template>
   <div id="app">
     <div class="input-box">
-      <input type="text" placeholder="lazy" v-model.lazy="lazyVal" />
+      <input type="text" placeholder="lazy" v-model="lazyVal" />
       <p>{{ lazyVal }}</p>
     </div>
     <div class="input-box">
-      <input type="text" placeholder="number" v-model.number="numberVal" />
+      <input type="text" placeholder="number" v-model="numberVal" />
       <p>{{ numberVal }}</p>
     </div>
     <div class="input-box">
-      <input type="text" placeholder="trim" v-model.trim="trimVal" />
+      <input type="text" placeholder="trim" v-model="trimVal" />
       <p>{{ trimVal }}</p>
     </div>
   </div>

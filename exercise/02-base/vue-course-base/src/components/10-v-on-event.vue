@@ -14,8 +14,8 @@ const handleTextB = () => {
 <template>
   <div class="flex-center flex-col">
     <h1>{{ text }}</h1>
-    <button class="flex-center" @click="handleTextA">click ABC</button>
-    <button class="flex-center" v-on:click="handleTextB">click 123</button>
+    <button class="flex-center">click ABC</button>
+    <button class="flex-center">click 123</button>
   </div>
 </template>
 <style>

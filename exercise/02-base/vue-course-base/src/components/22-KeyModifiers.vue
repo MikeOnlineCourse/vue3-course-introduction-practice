@@ -23,13 +23,7 @@ const handleKeydown = (e) => {
   <div>
     <div>
       驗證碼:
-      <input
-        class="code"
-        type="text"
-        v-model="verificationCode"
-        placeholder="輸入驗證碼"
-        @keyup.enter="handleSubmit"
-      />
+      <input class="code" type="text" v-model="verificationCode" placeholder="輸入驗證碼" />
     </div>
     <button @click="handleSubmit">Submit</button>
     <input type="text" @keyup="handleKeydown" placeholder="測試 key code" />

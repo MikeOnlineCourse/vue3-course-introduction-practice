@@ -27,9 +27,7 @@ const switchView = (type) => {
         </nav>
       </header>
       <main class="flex-center flex-col">
-        <KeepAlive>
-          <component :is="viewArr[activeType]"></component>
-        </KeepAlive>
+        <component :is="viewArr[activeType]"></component>
       </main>
     </div>
   </div>

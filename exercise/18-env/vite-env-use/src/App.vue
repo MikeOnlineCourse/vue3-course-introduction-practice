@@ -20,11 +20,7 @@ const closePopup = () => {
 };
 
 onMounted(() => {
-  console.log("process.env.TEST_TOKEN=>", process.env.TEST_TOKEN);
-  console.log("MODE=>", import.meta.env.MODE);
-  console.log("VITE_API_DOMAIN=>", import.meta.env.VITE_API_DOMAIN);
-
-  axios.get(`${import.meta.env.VITE_API_DOMAIN}courses/list`).then((res) => {
+  axios.get(`https://vue-lessons-api.vercel.app/courses/list`).then((res) => {
     coursesArr.value = res.data;
   });
 });
@@ -32,11 +28,7 @@ onMounted(() => {
 <template>
   <div class="box flex-center">
     <div class="flex-around w-1000px">
-      <Teleport
-        v-for="item in coursesArr"
-        :disabled="coursesId !== item.id"
-        to="#detal"
-      >
+      <Teleport v-for="item in coursesArr" :disabled="coursesId !== item.id" to="#detal">
         <a class="card" :key="item.id" @click="getDetal(item.id)">
           <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
           <img :src="item.photo" alt="" />

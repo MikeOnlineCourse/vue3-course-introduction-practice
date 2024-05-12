@@ -1,10 +1,6 @@
 <script setup></script>
 <template>
-  <div class="content">
-    <SvgIcon class="mx-10px" name="icon_delete" fill="#fff" />
-    <SvgIcon class="mx-10px" name="vue" />
-    <SvgIcon class="mx-10px" name="menu/icon_edit" fill="#fff" />
-  </div>
+  <div class="content"></div>
 </template>
 <style scoped>
 .content {

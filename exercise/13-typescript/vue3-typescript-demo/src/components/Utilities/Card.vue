@@ -1,18 +1,25 @@
-<script setup lang="ts">
-type TProps = {
-  coursesArr: TCourses[];
-  coursesId: number;
-  getDetal: (id: number) => void;
-  openUrl: (url: string) => void;
-  closePopup: () => void;
-};
-
-const props = withDefaults(defineProps<TProps>(), {
-  coursesArr: () => [],
-  coursesId: 0,
-  getDetal: () => {},
-  openUrl: () => {},
-  closePopup: () => {},
+<script setup>
+const props = defineProps({
+  coursesArr: {
+    type: Array,
+    default: () => [],
+  },
+  coursesId: {
+    type: Number,
+    default: 0,
+  },
+  getDetal: {
+    type: Function,
+    default: () => {},
+  },
+  openUrl: {
+    type: Function,
+    default: () => {},
+  },
+  closePopup: {
+    type: Function,
+    default: () => {},
+  },
 });
 </script>
 <template>

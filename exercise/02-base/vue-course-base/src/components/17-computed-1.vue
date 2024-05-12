@@ -1,17 +1,11 @@
 <script setup>
-import { computed, ref } from "vue";
+import { ref } from "vue";
 
 const title = ref("Mike");
-
-const sentence = computed(() => {
-  return `我的名字是, ${title.value}`;
-});
 </script>
 <template>
   <div>
-    <h1>
-      {{ sentence }}
-    </h1>
+    <h1>我的名字是, {{ title }}</h1>
     <input v-model="title" type="text" name="" id="" />
   </div>
 </template>

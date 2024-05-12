@@ -18,11 +18,8 @@ const hadleActiveLink = (idx) => {
 <template>
   <div>
     <ul>
-      <li v-show="nav.isShow" v-for="(nav, idx) in navMenu" :key="nav.name">
-        <a
-          :class="{ active: isActiveIdx === idx }"
-          @click="hadleActiveLink(idx)"
-        >
+      <li v-for="(nav, idx) in navMenu" :key="nav.name">
+        <a :class="{ active: isActiveIdx === idx }" @click="hadleActiveLink(idx)">
           {{ nav.name }}
         </a>
       </li>

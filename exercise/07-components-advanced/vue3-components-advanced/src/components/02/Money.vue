@@ -2,15 +2,13 @@
 import { useSlots, computed } from "vue";
 
 const slots = useSlots();
-
-const isShowSlots = computed(() => slots.default()[0].children);
 </script>
 <template>
-  <div class="money-box" v-if="isShowSlots">
+  <div class="money-box">
     <img src="../../assets/money.png" alt="" />
     <slot />
   </div>
-  <p v-else>-</p>
+  <!-- <p>-</p> -->
 </template>
 <style scoped>
 img {

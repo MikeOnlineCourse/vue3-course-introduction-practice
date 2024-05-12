@@ -9,13 +9,7 @@ const coursesId = ref(0);
 const targetCoursesArr = ref([]);
 
 watch(coursesId, (newVal) => {
-  if (newVal === 0) {
-    targetCoursesArr.value = coursesArr.value;
-    return;
-  }
-  targetCoursesArr.value = coursesArr.value.filter((item) => {
-    return item.id === newVal;
-  });
+  // some code
 });
 
 const getDetalData = (id) => {
@@ -31,12 +25,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="flex-between">
-    <a
-      class="card"
-      v-for="item in targetCoursesArr"
-      :key="item.id"
-      @click="getDetalData(item.id)"
-    >
+    <a class="card" v-for="item in targetCoursesArr" :key="item.id" @click="getDetalData(item.id)">
       <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
 
       <img :src="item.photo" alt="" />
@@ -56,9 +45,7 @@ onMounted(() => {
     </a>
   </div>
 
-  <button v-show="targetCoursesArr.length !== 3" @click="getDetalData(0)">
-    Back
-  </button>
+  <button v-show="targetCoursesArr.length !== 3" @click="getDetalData(0)">Back</button>
 </template>
 
 <style>

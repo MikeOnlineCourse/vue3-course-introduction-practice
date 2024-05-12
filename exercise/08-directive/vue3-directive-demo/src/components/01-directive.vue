@@ -1,10 +1,6 @@
-<script setup>
-const vFocus = {
-  mounted: (el) => el.focus(),
-};
-</script>
+<script setup></script>
 <template>
-  <input type="text" v-focus placeholder="輸入點什麼..." />
+  <input type="text" placeholder="輸入點什麼..." />
 </template>
 <style scoped>
 input {

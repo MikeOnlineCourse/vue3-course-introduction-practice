@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
-import axios from "axios";
+// import axios from "axios";
 
 const coursesArr = ref([]);
 
@@ -8,20 +8,14 @@ const openUrl = (url) => {
   window.open(url, "_blank");
 };
 
-onMounted(() => {
-  axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
-    coursesArr.value = res.data;
-  });
-});
+// axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
+//   coursesArr.value = res.data;
+// });
+onMounted(() => {});
 </script>
 <template>
   <div class="flex-between">
-    <a
-      class="card"
-      v-for="item in coursesArr"
-      :key="item.id"
-      @click="openUrl(item.url)"
-    >
+    <a class="card" v-for="item in coursesArr" :key="item.id" @click="openUrl(item.url)">
       <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
 
       <img :src="item.photo" alt="" />

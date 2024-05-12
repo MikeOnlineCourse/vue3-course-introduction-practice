@@ -13,10 +13,6 @@ const navMenu = ref([
   { name: "註冊", isShow: true },
 ]);
 
-const navMenuAuth = computed(() => {
-  return navMenu.value.filter((nav) => nav.isShow);
-});
-
 const hadleActiveLink = (idx) => {
   isActiveIdx.value = idx;
 };
@@ -24,11 +20,8 @@ const hadleActiveLink = (idx) => {
 <template>
   <div>
     <ul>
-      <li v-for="(nav, idx) in navMenuAuth" :key="nav.name">
-        <a
-          :class="{ active: isActiveIdx === idx }"
-          @click="hadleActiveLink(idx)"
-        >
+      <li v-for="(nav, idx) in navMenu" :key="nav.name">
+        <a :class="{ active: isActiveIdx === idx }" @click="hadleActiveLink(idx)">
           {{ nav.name }}
         </a>
       </li>

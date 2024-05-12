@@ -21,7 +21,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="flex-between mt-40px">
-    <CardBox :coursesArr="coursesArr" :handleClickCard="handleClickCard" :handleMore="handleMore" />
+    <CardBox />
   </div>
 </template>
 <style scoped>

@@ -1,7 +1,7 @@
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted } from "vue";
 
-const el = ref<HTMLInputElement | null>(null);
+const el = ref(null);
 
 onMounted(() => {
   el.value?.focus();
@@ -10,6 +10,6 @@ onMounted(() => {
 
 <template>
   <div>
-    <input type="text" />
+    <input ref="el" type="text" />
   </div>
 </template>

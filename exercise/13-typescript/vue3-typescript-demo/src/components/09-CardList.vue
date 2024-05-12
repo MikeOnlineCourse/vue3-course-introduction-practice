@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import Popup from "./Utilities/Popup.vue";
 import Card from "./Utilities/Card.vue";
 
-const coursesArr = ref<TCourses[]>([]);
+const coursesArr = ref([]);
 
-const coursesId = ref<number>(0);
+const coursesId = ref(0);
 
-const isOpen = ref<boolean>(false);
+const isOpen = ref(false);
 
-const getDetal = (id: number) => {
+const getDetal = (id) => {
   coursesId.value = id;
   isOpen.value = true;
 };
@@ -20,12 +20,12 @@ const closePopup = () => {
   isOpen.value = false;
 };
 
-const openUrl = (url: string) => {
+const openUrl = (url) => {
   window.open(url, "_blank");
 };
 
 onMounted(() => {
-  axios.get<TCourses[]>("https://vue-lessons-api.vercel.app/courses/list").then((res: AxiosResponse<TCourses[]>) => {
+  axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
     coursesArr.value = res.data;
   });
 });

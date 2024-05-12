@@ -1,13 +1,7 @@
-<script setup>
-import { computed } from "vue";
-
-const model = defineModel();
-
-const name = computed(() => (!model.value ? model.value : `: ${model.value}`));
-</script>
+<script setup></script>
 <template>
   <div class="name_bar">
-    <input v-model="model" type="text" required />
+    <input type="text" required />
     <h1 class="title">輸入你的姓名 {{ name }}</h1>
   </div>
 </template>

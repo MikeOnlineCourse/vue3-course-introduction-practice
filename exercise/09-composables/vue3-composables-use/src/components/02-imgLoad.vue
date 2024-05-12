@@ -1,9 +1,23 @@
 <script setup>
-import { useImgLoad } from "../composables/useImgLoad.js";
-
+import { ref, onMounted } from "vue";
 const banner = "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KncG4Kdw578f6IdYj2Vczg.jpeg";
 
-const { images, isLoad, error } = useImgLoad(banner);
+const images = ref(null);
+const error = ref("");
+const isLoad = ref(true);
+
+onMounted(() => {
+  const img = new Image();
+  img.src = banner;
+
+  img.onload = () => {
+    images.value = banner;
+    isLoad.value = false;
+  };
+  img.onerror = () => {
+    error.value = "圖片載入失敗";
+  };
+});
 </script>
 <template>
   <div class="imgload">

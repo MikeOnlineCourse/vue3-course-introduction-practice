@@ -1,19 +1,10 @@
 <script setup>
-import { ref, watch } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { ref } from "vue";
 
 import RadioType from "../components/RadioType/index.vue";
 
-const route = useRoute();
-
-const router = useRouter();
-
 // higher | lowLevel | medium | default
-const info = ref(route.name === "member" ? "default" : route.name);
-
-watch(info, (newVal) => {
-  router.push(`/member/${newVal}`);
-});
+const info = ref("");
 </script>
 <template>
   <div class="content flex-center">

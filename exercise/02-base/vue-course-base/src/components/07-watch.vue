@@ -9,17 +9,6 @@ const userInfo = reactive({
   email: "",
 });
 
-watch(title, (newTitle) => {
-  console.log(newTitle);
-});
-
-watch(
-  () => userInfo.email,
-  (newEmail) => {
-    console.log(newEmail);
-  }
-);
-
 setTimeout(() => {
   title.value = "Mike";
   userInfo.email = "1208966@gmail.com";

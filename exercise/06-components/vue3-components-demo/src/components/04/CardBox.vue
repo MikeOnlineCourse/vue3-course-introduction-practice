@@ -1,20 +1,4 @@
-<script setup>
-const props = defineProps({
-  coursesArr: {
-    type: Array,
-    default: () => [],
-    required: true,
-  },
-  handleClickCard: {
-    type: Function,
-    default: () => {},
-  },
-  handleMore: {
-    type: Function,
-    default: () => {},
-  },
-});
-</script>
+<script setup></script>
 <template>
   <a class="card" v-for="item in coursesArr" :key="item.id" @click="props.handleClickCard(item.id)">
     <p class="more" @click.stop="props.handleMore(item.moreUrl)">觀看更多</p>

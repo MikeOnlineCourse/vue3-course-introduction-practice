@@ -1,14 +1,14 @@
 <script setup>
-import { defineAsyncComponent, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 import RadioType from "./RadioType/index.vue";
 import axios from "axios";
 
+import HigherPage from "./09/higher.vue";
+import LowLevelPage from "./09/lowLevel.vue";
+import MediumPage from "./09/medium.vue";
+
 // higher | lowLevel | medium
 const info = ref("");
-
-const HigherPage = defineAsyncComponent(() => import(`./09/higher.vue`));
-const LowLevelPage = defineAsyncComponent(() => import(`./09/lowLevel.vue`));
-const MediumPage = defineAsyncComponent(() => import(`./09/medium.vue`));
 
 onMounted(() => {
   axios.get("https://vue-lessons-api.vercel.app/courses/list").then(() => {

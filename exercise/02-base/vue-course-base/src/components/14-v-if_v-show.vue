@@ -1,18 +1,10 @@
-<script setup>
-import { ref } from "vue";
-
-const isBlock = ref(true);
-
-const handleDisplayBlock = () => {
-  isBlock.value = !isBlock.value;
-};
-</script>
+<script setup></script>
 <template>
   <div class="flex-between flex-col">
-    <h1 v-if="isBlock">v-if Button</h1>
-    <h1 v-show="isBlock">v-show Button</h1>
+    <h1>v-if Button</h1>
+    <h1>v-show Button</h1>
 
-    <button class="flex-center" @click="handleDisplayBlock">DOM toggle</button>
+    <button class="flex-center">DOM toggle</button>
   </div>
 </template>
 <style>

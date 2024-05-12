@@ -4,12 +4,6 @@ import About from "./03/About.vue";
 import Courses from "./03/Courses.vue";
 import { ref } from "vue";
 
-const viewArr = {
-  Home,
-  About,
-  Courses,
-};
-
 const activeType = ref("Home");
 
 const switchView = (type) => {
@@ -27,7 +21,9 @@ const switchView = (type) => {
         </nav>
       </header>
       <main class="flex-center flex-col">
-        <component :is="viewArr[activeType]"></component>
+        <Home v-if="activeType === 'Home'" />
+        <About v-if="activeType === 'About'" />
+        <Courses v-if="activeType === 'Courses'" />
       </main>
     </div>
   </div>

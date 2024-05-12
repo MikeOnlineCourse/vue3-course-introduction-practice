@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from "vue";
 const imgIdx = ref(0);
-const prevIdx = ref(0);
-const transType = ref("right");
 
 const slidList = ref([
   { id: "1", src: "https://source.unsplash.com/600x400?1" },
@@ -17,18 +15,13 @@ const slidList = ref([
 
 const handleMenuActive = (idx) => {
   imgIdx.value = idx;
-  transType.value = idx > prevIdx.value ? "left" : "right";
-};
-
-const afterLeave = () => {
-  prevIdx.value = imgIdx.value;
 };
 </script>
 <template>
   <div class="transition-group-page">
     <div class="content">
       <div class="mid">
-        <transition-group :name="transType" @after-leave="afterLeave">
+        <transition-group name="slids">
           <img v-for="(item, idx) in slidList" v-show="imgIdx === idx" :key="item.id" :src="item.src" />
         </transition-group>
       </div>

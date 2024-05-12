@@ -23,26 +23,14 @@ watch(name, (newVal, oldVal) => {
  * immediate: true 初始化先觸發一次
  * deep: true 深度監聽
  */
-watch(
-  useInfo,
-  (newInfo) => {
-    console.log("deep=>", newInfo);
-  },
-  {
-    deep: true,
-    immediate: true,
-    once: true,
-  }
-);
+watch(useInfo, (newInfo) => {
+  console.log("deep=>", newInfo);
+});
 
 // once 只會觸發一次
-watch(
-  name,
-  (newName) => {
-    console.log("once=>", newName);
-  },
-  { once: true }
-);
+watch(name, (newName) => {
+  console.log("once=>", newName);
+});
 </script>
 <template>
   <div></div>

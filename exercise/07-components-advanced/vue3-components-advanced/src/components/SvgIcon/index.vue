@@ -14,8 +14,6 @@ const svgName = computed(() => {
     return `#/${props.name}`;
   }
 });
-
-const svgClass = computed(() => (props.className ? "svg-icon " + props.className : "svg-icon"));
 </script>
 
 <template>

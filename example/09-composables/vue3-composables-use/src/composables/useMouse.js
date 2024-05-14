@@ -4,14 +4,18 @@ export const useMouse = () => {
   const x = ref(0);
   const y = ref(0);
 
-  function update(e) {
+  const update = (e) => {
     x.value = e.pageX;
     y.value = e.pageY;
-  }
+  };
 
-  onMounted(() => window.addEventListener("mousemove", update));
+  onMounted(() => {
+    window.addEventListener("mousemove", update);
+  });
 
-  onUnmounted(() => window.removeEventListener("mousemove", update));
+  onUnmounted(() => {
+    window.removeEventListener("mousemove", update);
+  });
 
   return { x, y };
 };

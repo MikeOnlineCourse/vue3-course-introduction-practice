@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/03-transition-group-plus.vue";
+import DemoComponent from "./components/03-keyframes.vue";
 </script>
 
 <template>
@@ -27,5 +27,11 @@ img {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

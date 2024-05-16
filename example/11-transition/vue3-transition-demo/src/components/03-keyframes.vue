@@ -27,16 +27,13 @@ const handleAlert = () => {
 }
 @keyframes popup-in {
   0% {
-    transform: scale(0) translateX(-50%) translateY(-50%);
-    transform-origin: center;
+    transform: scale(0);
   }
   50% {
-    transform: scale(1.25) translateX(-50%) translateY(-50%);
-    transform-origin: center;
+    transform: scale(1.25);
   }
   100% {
-    transform: scale(1) translateX(-50%) translateY(-50%);
-    transform-origin: center;
+    transform: scale(1);
   }
 }
 .content {
@@ -47,12 +44,21 @@ const handleAlert = () => {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
   width: 500px;
   height: 400px;
+  margin-left: -250px;
+  margin-top: -200px;
   border-radius: 16px;
   background-color: #fff;
   flex-direction: column;
   box-shadow: 0 0 30px #000;
+}
+
+button {
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  background-color: #40c297;
+  font-size: 22px;
 }
 </style>

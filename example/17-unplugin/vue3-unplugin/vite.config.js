@@ -17,6 +17,7 @@ export default defineConfig({
     Layouts(),
     AutoImport({
       imports: ["vue", "vue-router", "vue-i18n"],
+      dirs: ["./src/composables"],
       dts: "src/auto-imports.js",
     }),
     Components({

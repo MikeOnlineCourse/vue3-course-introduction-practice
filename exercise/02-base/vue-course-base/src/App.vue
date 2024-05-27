@@ -1,11 +1,7 @@
-<script setup>
-import ComponentDemo from "./components/25-Element.vue";
-</script>
+<script></script>
 
 <template>
-  <div>
-    <ComponentDemo />
-  </div>
+  <div></div>
 </template>
 
 <style>

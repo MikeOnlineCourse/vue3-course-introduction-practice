@@ -1,7 +1,11 @@
-<script></script>
+<script>
+import DemoComponent from "./components/12-v-for.vue";
+</script>
 
 <template>
-  <div></div>
+  <div>
+    <DemoComponent />
+  </div>
 </template>
 
 <style>

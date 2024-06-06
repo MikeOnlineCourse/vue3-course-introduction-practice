@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import DemoComponent from "./components/12-v-for.vue";
 </script>
 

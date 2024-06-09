@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const listArr = ref(["A", "B", "C"]);
+const listArr = ref(["Mike", "Jacky", "Andy"]);
 
 const info = ref({
   name: "mike",
@@ -12,6 +12,25 @@ const info = ref({
 const words = ref("abcdefghijklmnopqrstuvwzyz");
 </script>
 <template>
+  <!-- number -->
+  <ul>
+    <li>
+      <h1></h1>
+    </li>
+  </ul>
+  <!-- array -->
+  <ul>
+    <li>
+      <h1></h1>
+    </li>
+  </ul>
+  <!-- object -->
+  <ul>
+    <li>
+      <h1></h1>
+    </li>
+  </ul>
+  <!-- string -->
   <ul>
     <li>
       <h1></h1>

@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/11-v-bind.vue";
+import DemoComponent from "./components/12-v-for.vue";
 </script>
 
 <template>

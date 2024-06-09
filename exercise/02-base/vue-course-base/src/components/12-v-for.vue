@@ -2,6 +2,14 @@
 import { ref } from "vue";
 
 const listArr = ref(["A", "B", "C"]);
+
+const info = ref({
+  name: "mike",
+  age: 12,
+  address: "Taiwan",
+});
+
+const words = ref("abcdefghijklmnopqrstuvwzyz");
 </script>
 <template>
   <ul>

@@ -18,10 +18,8 @@ const listArr = ref([
 </script>
 <template>
   <ul>
-    <li v-for="list in listArr">
-      <h1>
-        {{ list.name }}
-      </h1>
+    <li>
+      <h1></h1>
     </li>
   </ul>
 </template>

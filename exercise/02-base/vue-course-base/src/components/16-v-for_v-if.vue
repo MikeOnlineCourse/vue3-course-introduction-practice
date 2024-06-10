@@ -3,13 +3,7 @@ import { ref } from "vue";
 
 const isActiveIdx = ref(0);
 
-const navMenu = ref([
-  { name: "首頁", isShow: true },
-  { name: "關於我們", isShow: true },
-  { name: "商品列表", isShow: false },
-  { name: "歷史沿革", isShow: true },
-  { name: "未來藍圖", isShow: true },
-]);
+const navMenu = ref([{ name: "首頁" }, { name: "關於我們" }, { name: "商品列表" }, { name: "歷史沿革" }, { name: "未來藍圖" }]);
 
 const hadleActiveLink = (idx) => {
   isActiveIdx.value = idx;

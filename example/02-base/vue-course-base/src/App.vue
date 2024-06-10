@@ -1,10 +1,10 @@
 <script setup>
-import ComponentDemo from "./components/25-Element.vue";
+import DemoComponent from "./components/01-OptionsAPIvsCompositionAPI.vue";
 </script>
 
 <template>
-  <div>
-    <ComponentDemo />
+  <div class="content flex-center">
+    <DemoComponent />
   </div>
 </template>
 
@@ -13,5 +13,20 @@ import ComponentDemo from "./components/25-Element.vue";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#app,
+.content {
+  width: 100%;
+  height: 100%;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

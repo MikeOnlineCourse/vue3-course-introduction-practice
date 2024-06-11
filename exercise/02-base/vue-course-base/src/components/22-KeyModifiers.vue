@@ -10,14 +10,7 @@ const handleSubmit = () => {
   console.log(req);
 };
 
-const handleKeydown = (e) => {
-  const log = {
-    key: e.key,
-    code: e.code,
-    keyCode: e.keyCode,
-  };
-  console.log(log);
-};
+// const handleKeydown = (e) => {};
 </script>
 <template>
   <div>
@@ -26,7 +19,7 @@ const handleKeydown = (e) => {
       <input class="code" type="text" v-model="verificationCode" placeholder="輸入驗證碼" />
     </div>
     <button @click="handleSubmit">Submit</button>
-    <input type="text" @keyup="handleKeydown" placeholder="測試 key code" />
+    <!-- <input type="text" @keyup="handleKeydown" placeholder="測試 key code" /> -->
   </div>
 </template>
 <style>

@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/22-KeyModifiers.vue";
+import DemoComponent from "./components/01-OptionsAPIvsCompositionAPI.vue";
 </script>
 
 <template>

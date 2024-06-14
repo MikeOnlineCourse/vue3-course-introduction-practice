@@ -13,24 +13,6 @@ setTimeout(() => {
   name.value = "Mike";
   useInfo.value.name = "Jacky";
 }, 2000);
-
-// 監聽 name
-watch(name, (newVal, oldVal) => {
-  console.log({ newVal, oldVal });
-});
-
-/**
- * immediate: true 初始化先觸發一次
- * deep: true 深度監聽
- */
-watch(useInfo, (newInfo) => {
-  console.log("deep=>", newInfo);
-});
-
-// once 只會觸發一次
-watch(name, (newName) => {
-  console.log("once=>", newName);
-});
 </script>
 <template>
   <div></div>

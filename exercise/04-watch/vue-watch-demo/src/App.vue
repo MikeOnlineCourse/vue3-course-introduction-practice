@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/04-no-watch-2.vue";
+import DemoComponent from "./components/01-watch.vue";
 </script>
 <template>
   <div>

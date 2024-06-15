@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, watch, watchEffect } from "vue";
+import { onMounted, ref, watch } from "vue";
 import axios from "axios";
 
 const coursesArr = ref([]);
@@ -12,25 +12,7 @@ const getDetalData = (id) => {
   coursesId.value = id;
 };
 
-// watch(coursesId, (newVal) => {
-//   if (newVal === 0) return;
-//   axios
-//     .get(`https://vue-lessons-api.vercel.app/courses/${newVal}`)
-//     .then((res) => {
-//       coursesDetal.value = res.data.data[0];
-//       console.log("coursesDetal=>", coursesDetal.value);
-//     });
-// });
-
-watchEffect(() => {
-  if (coursesId.value === 0) return;
-  axios
-    .get(`https://vue-lessons-api.vercel.app/courses/${coursesId.value}`)
-    .then((res) => {
-      coursesDetal.value = res.data.data[0];
-      console.log("coursesDetal=>", coursesDetal.value);
-    });
-});
+watch(coursesId, (newVal) => {});
 
 onMounted(() => {
   axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
@@ -40,12 +22,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="flex-between">
-    <a
-      class="card"
-      v-for="item in coursesArr"
-      :key="item.id"
-      @click="getDetalData(item.id)"
-    >
+    <a class="card" v-for="item in coursesArr" :key="item.id" @click="getDetalData(item.id)">
       <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
 
       <img :src="item.photo" alt="" />

@@ -3,11 +3,13 @@ import { ref, watch } from "vue";
 
 const name = ref("Jacky");
 
-const userInfo = ref({
-  age: 12,
-  name: "Mike",
-  address: "Taipei",
+const stop = watch(name, (newName) => {
+  console.log("資料被更改=>", newName);
 });
+
+const stopWatch = () => {
+  stop();
+};
 </script>
 <template>
   <div>
@@ -15,10 +17,7 @@ const userInfo = ref({
       <h1 class="title">我的名字是 : {{ name }}</h1>
       <input v-model="name" class="mt-10px" type="text" name="" id="" placeholder="輸入你的名字" />
     </div>
-    <div class="content_box">
-      <h1 class="title">我的名字是 : {{ userInfo.name }}</h1>
-      <input v-model="userInfo.name" class="mt-10px" type="text" name="" id="" placeholder="輸入你的名字" />
-    </div>
+    <button @click="stopWatch">STOP Watch</button>
   </div>
 </template>
 <style>

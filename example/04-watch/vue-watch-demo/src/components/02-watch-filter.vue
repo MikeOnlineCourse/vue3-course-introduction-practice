@@ -4,28 +4,30 @@ import axios from "axios";
 
 const coursesArr = ref([]);
 
+const coursesDetal = ref({});
+
 const coursesId = ref(0);
-
-const targetCoursesArr = ref([]);
-
-watch(coursesId, (newVal) => {
-  // some code
-});
 
 const getDetalData = (id) => {
   coursesId.value = id;
 };
 
+watch(coursesId, (newVal) => {
+  if (newVal === 0) return;
+  const courses = coursesArr.value.filter((item) => item.id === newVal);
+  coursesDetal.value = courses[0];
+  console.log(coursesDetal.value);
+});
+
 onMounted(() => {
   axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
     coursesArr.value = res.data;
-    targetCoursesArr.value = coursesArr.value;
   });
 });
 </script>
 <template>
   <div class="flex-between">
-    <a class="card" v-for="item in targetCoursesArr" :key="item.id" @click="getDetalData(item.id)">
+    <a class="card" v-for="item in coursesArr" :key="item.id" @click="getDetalData(item.id)">
       <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
 
       <img :src="item.photo" alt="" />
@@ -44,8 +46,6 @@ onMounted(() => {
       </div>
     </a>
   </div>
-
-  <button v-show="targetCoursesArr.length !== 3" @click="getDetalData(0)">Back</button>
 </template>
 
 <style>
@@ -133,15 +133,5 @@ p.more {
   margin-right: 10px;
   width: 25px;
   height: 25px;
-}
-button {
-  width: 200px;
-  height: 30px;
-  background-color: #dddddd;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px auto 0 auto;
 }
 </style>

@@ -12,4 +12,9 @@ import DemoComponent from "./components/01-watch.vue";
   margin: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  background-color: cadetblue;
+}
 </style>

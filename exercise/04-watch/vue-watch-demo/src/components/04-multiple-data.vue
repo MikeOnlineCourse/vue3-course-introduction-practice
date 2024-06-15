@@ -3,11 +3,7 @@ import { ref, watch } from "vue";
 
 const name = ref("Jacky");
 
-const userInfo = ref({
-  age: 12,
-  name: "Mike",
-  address: "Taipei",
-});
+const age = ref(12);
 </script>
 <template>
   <div>
@@ -16,8 +12,8 @@ const userInfo = ref({
       <input v-model="name" class="mt-10px" type="text" name="" id="" placeholder="輸入你的名字" />
     </div>
     <div class="content_box">
-      <h1 class="title">我的名字是 : {{ userInfo.name }}</h1>
-      <input v-model="userInfo.name" class="mt-10px" type="text" name="" id="" placeholder="輸入你的名字" />
+      <h1 class="title">我的年齡是 : {{ age }} 歲</h1>
+      <input v-model="age" class="mt-10px" type="text" name="" id="" placeholder="輸入你的年齡" />
     </div>
   </div>
 </template>
@@ -26,7 +22,7 @@ h1.title {
   font-size: 30px;
 }
 .content_box {
-  margin: 120px 0;
+  margin: 50px 0;
 }
 input {
   width: 200px;

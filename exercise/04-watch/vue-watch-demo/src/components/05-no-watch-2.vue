@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import axios from "axios";
 
 const coursesArr = ref([]);
@@ -25,6 +25,7 @@ const getDetalData = (id) => {
 onMounted(() => {
   axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
     coursesArr.value = res.data;
+    targetCoursesArr.value = coursesArr.value;
   });
 });
 </script>

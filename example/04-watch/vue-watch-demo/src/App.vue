@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/04-no-watch-2.vue";
+import DemoComponent from "./components/04-multiple-data.vue";
 </script>
 <template>
   <div>
@@ -11,5 +11,10 @@ import DemoComponent from "./components/04-no-watch-2.vue";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: cadetblue;
 }
 </style>

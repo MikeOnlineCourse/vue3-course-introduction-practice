@@ -3,35 +3,35 @@ import { ref, watch } from "vue";
 
 const name = ref("Jacky");
 
-const useInfo = ref({
+const userInfo = ref({
   age: 12,
   name: "Mike",
   address: "Taipei",
 });
 
-setTimeout(() => {
-  name.value = "Mike";
-  useInfo.value.name = "Jacky";
-}, 2000);
-
-// 監聽 name
-watch(name, (newVal, oldVal) => {
-  console.log({ newVal, oldVal });
-});
-
 /**
  * immediate: true 初始化先觸發一次
+ */
+watch(
+  name,
+  (newName) => {
+    console.log("immediate=>", newName);
+  },
+  {
+    immediate: true,
+  }
+);
+
+/**
  * deep: true 深度監聽
  */
 watch(
-  useInfo,
+  userInfo,
   (newInfo) => {
     console.log("deep=>", newInfo);
   },
   {
     deep: true,
-    immediate: true,
-    once: true,
   }
 );
 
@@ -41,10 +41,36 @@ watch(
   (newName) => {
     console.log("once=>", newName);
   },
-  { once: true }
+  {
+    once: true,
+  }
 );
 </script>
 <template>
-  <div></div>
+  <div>
+    <div class="content_box">
+      <h1 class="title">我的名字是 : {{ name }}</h1>
+      <input v-model="name" class="mt-10px" type="text" name="" id="" placeholder="輸入你的名字" />
+    </div>
+    <div class="content_box">
+      <h1 class="title">我的名字是 : {{ userInfo.name }}</h1>
+      <input v-model="userInfo.name" class="mt-10px" type="text" name="" id="" placeholder="輸入你的名字" />
+    </div>
+  </div>
 </template>
-<style></style>
+<style>
+h1.title {
+  font-size: 30px;
+}
+.content_box {
+  margin: 120px 0;
+}
+input {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+.mt-10px {
+  margin-top: 10px;
+}
+</style>

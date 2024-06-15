@@ -2,10 +2,13 @@
 import { onMounted, ref, watch } from "vue";
 import axios from "axios";
 
+// 所有的課程
 const coursesArr = ref([]);
 
+// 被選到的課程 id
 const coursesId = ref(0);
 
+// 被選到的課程
 const targetCoursesArr = ref([]);
 
 watch(coursesId, (newVal) => {});
@@ -17,13 +20,12 @@ const getDetalData = (id) => {
 onMounted(() => {
   axios.get("https://vue-lessons-api.vercel.app/courses/list").then((res) => {
     coursesArr.value = res.data;
-    targetCoursesArr.value = coursesArr.value;
   });
 });
 </script>
 <template>
   <div class="flex-between">
-    <a class="card" v-for="item in targetCoursesArr" :key="item.id" @click="getDetalData(item.id)">
+    <a class="card" v-for="item in coursesArr" :key="item.id" @click="getDetalData(item.id)">
       <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
 
       <img :src="item.photo" alt="" />

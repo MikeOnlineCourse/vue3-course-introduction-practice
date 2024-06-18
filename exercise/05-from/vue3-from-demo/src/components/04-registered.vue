@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from "vue";
 
+// 是否註冊成功
+const isSuccess = ref(false);
+
+// 欄位
 const registered = ref({
   username: "",
   password: "",
@@ -10,13 +14,16 @@ const registered = ref({
   terms: false,
 });
 
+// 錯誤訊息塞這邊
+const error_message = ref({});
+
 const handRegisteredFn = () => {
   // https://vue-lessons-api.vercel.app/auth/registered
 };
 </script>
 <template>
   <div>
-    <div v-if="!isReg">
+    <div>
       <div class="input-box">
         <p>NAME</p>
         <input type="text" placeholder="輸入使用者名稱" v-model="registered.username" />
@@ -26,7 +33,7 @@ const handRegisteredFn = () => {
       </div>
       <div class="input-box">
         <p>PASSWORD</p>
-        <input type="password" placeholder="輸入密碼" v-model="registered.password" />
+        <input type="text" placeholder="輸入密碼" v-model="registered.password" />
         <p class="error">
           <!-- error message -->
         </p>

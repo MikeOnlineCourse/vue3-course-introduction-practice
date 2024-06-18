@@ -3,7 +3,17 @@ import { ref } from "vue";
 
 const courseslist = ref({
   checkItem: [],
-  tags: [{ tag: "JavaScript" }, { tag: "Html" }, { tag: "Css" }, { tag: "Html5" }, { tag: "Vuejs" }, { tag: "React" }, { tag: "Sass" }, { tag: "Css3" }, { tag: "Canvas" }],
+  tags: [
+    { tag: "JavaScript" },
+    { tag: "Html" },
+    { tag: "Css" },
+    { tag: "Html5" },
+    { tag: "Vuejs" },
+    { tag: "React" },
+    { tag: "Sass" },
+    { tag: "Css3" },
+    { tag: "Canvas" },
+  ],
 });
 
 const handSelectCheck = () => {

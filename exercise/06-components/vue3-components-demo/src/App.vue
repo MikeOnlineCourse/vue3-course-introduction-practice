@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/05-emits_defineEmits.vue";
+import DemoComponent from "./components/01-component.vue";
 </script>
 
 <template>

@@ -1,8 +1,4 @@
-<script setup>
-import { useSlots, computed } from "vue";
-
-const slots = useSlots();
-</script>
+<script setup></script>
 <template>
   <div class="money-box">
     <img src="../../assets/money.png" alt="" />

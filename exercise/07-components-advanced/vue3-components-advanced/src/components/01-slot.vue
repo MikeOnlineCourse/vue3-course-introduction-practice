@@ -4,23 +4,33 @@
     <div class="content">
       <h1 class="title">
         <img src="../assets/vue.svg" alt="" />
-        应用实例
+        應用實例
       </h1>
-      <p>每个 Vue 应用都是通过 createApp 函数创建一个新的 应用实例：</p>
+      <p>
+        每個 Vue 應用程式都是透過 createApp 函數建立一個新的 應用程式實例 ：
+      </p>
     </div>
     <div class="content">
       <h1 class="title">
         <img src="../assets/vue.svg" alt="" />
         根组件
       </h1>
-      <p>我们传入 createApp 的对象实际上是一个组件，每个应用都需要一个“根组件”，其他组件将作为其子组件。 如果你使用的是单文件组件，我们可以直接从另一个文件中导入根组件。</p>
+      <p>
+        我們傳入 createApp
+        的物件實際上是一個元件，每個應用程式都需要一個“根元件”，其他元件將作為其子元件。
+        如果你使用的是單一檔案元件，我們可以直接從另一個檔案匯入根元件。
+      </p>
     </div>
     <div class="content">
       <h1 class="title">
         <img src="../assets/vue.svg" alt="" />
-        挂载应用
+        掛載應用
       </h1>
-      <p>应用实例必须在调用了 .mount() 方法后才会渲染出来。该方法接收一个“容器”参数，可以是一个实际的 DOM 元素或是一个 CSS 选择器字符串</p>
+      <p>
+        應用實例必須在呼叫了 .mount()
+        方法後才會渲染出來。此方法接收一個「容器」參數，可以是一個實際的 DOM
+        元素或是一個 CSS 選擇器字串
+      </p>
     </div>
   </div>
 </template>

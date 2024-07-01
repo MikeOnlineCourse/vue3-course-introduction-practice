@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/06-teleport.vue";
+import DemoComponent from "./components/01-slot.vue";
 </script>
 
 <template>

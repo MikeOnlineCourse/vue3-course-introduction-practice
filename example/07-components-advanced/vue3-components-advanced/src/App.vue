@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/09-defineAsyncComponent.vue";
+import DemoComponent from "./components/01-slot.vue";
 </script>
 
 <template>

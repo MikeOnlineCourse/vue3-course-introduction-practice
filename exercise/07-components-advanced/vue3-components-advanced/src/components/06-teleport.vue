@@ -28,8 +28,8 @@ onMounted(() => {
 <template>
   <div class="box">
     <div class="flex-around w-1000px">
-      <div v-for="item in coursesArr">
-        <a class="card" :key="item.id" @click="getDetal(item.id)">
+      <div v-for="item in coursesArr" :key="item.id">
+        <a class="card" @click="getDetal(item.id)">
           <p class="more" @click.stop="openUrl(item.moreUrl)">觀看更多</p>
           <img :src="item.photo" alt="" />
           <div class="content">

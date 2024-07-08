@@ -1,14 +1,14 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const money = ref(0);
 
-const formattedNumber = computed(() => money.value.toLocaleString());
+const thousand = computed(() => money.value.toLocaleString());
 </script>
 <template>
   <div>
     <input v-model="money" type="number" placeholder="輸入個金額..." />
-    <h1>{{ formattedNumber }}</h1>
+    <h1>{{ thousand }}</h1>
   </div>
 </template>
 <style scoped>

@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/04-directive_plugins.vue";
+import DemoComponent from "./components/01-directive.vue";
 </script>
 
 <template>

@@ -22,7 +22,7 @@ onMounted(() => {
       </header>
       <p class="content">{{ card.content }}</p>
       <div class="img_box">
-        <img class="post_photo" v-src="card.photo" alt="" />
+        <img class="post_photo" :src="card.photo" alt="" />
       </div>
     </div>
   </div>

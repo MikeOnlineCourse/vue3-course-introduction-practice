@@ -61,4 +61,9 @@ button {
   background-color: #40c297;
   font-size: 22px;
 }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>

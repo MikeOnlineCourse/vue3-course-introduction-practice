@@ -1,5 +1,5 @@
 <script setup>
-import DemoComponent from "./components/03-keyframes.vue";
+import DemoComponent from "./components/01-transition.vue";
 </script>
 
 <template>

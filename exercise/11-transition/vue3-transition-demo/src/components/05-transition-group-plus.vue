@@ -3,14 +3,14 @@ import { ref } from "vue";
 const imgIdx = ref(0);
 
 const slidList = ref([
-  { id: "1", src: "https://source.unsplash.com/600x400?1" },
-  { id: "2", src: "https://source.unsplash.com/600x400?2" },
-  { id: "3", src: "https://source.unsplash.com/600x400?3" },
-  { id: "4", src: "https://source.unsplash.com/600x400?4" },
-  { id: "5", src: "https://source.unsplash.com/600x400?5" },
-  { id: "6", src: "https://source.unsplash.com/600x400?6" },
-  { id: "7", src: "https://source.unsplash.com/600x400?7" },
-  { id: "8", src: "https://source.unsplash.com/600x400?8" },
+  { id: "1", src: "https://placeholder.pics/svg/600x400/FFB833-73D4FF" },
+  { id: "2", src: "https://placeholder.pics/svg/600x400/BCFFA6-FFD31F" },
+  { id: "3", src: "https://placeholder.pics/svg/600x400/FF4FF0-FF2B94" },
+  { id: "4", src: "https://placeholder.pics/svg/600x400/D8FFB3-4FFFFA" },
+  { id: "5", src: "https://placeholder.pics/svg/600x400/FFF0F0-FFB0B0" },
+  { id: "6", src: "https://placeholder.pics/svg/600x400/CAFFD2-FFD3C2" },
+  { id: "7", src: "https://placeholder.pics/svg/600x400/FFBDDD-93FF29" },
+  { id: "8", src: "https://placeholder.pics/svg/600x400/B3CDFF-1A65FF" },
 ]);
 
 const handleMenuActive = (idx) => {
@@ -26,7 +26,12 @@ const handleMenuActive = (idx) => {
         </transition-group>
       </div>
       <nav class="nav_menu">
-        <a v-for="(item, idx) in slidList" :key="item.id" :class="{ active: imgIdx === idx }" @click="handleMenuActive(idx)">
+        <a
+          v-for="(item, idx) in slidList"
+          :key="item.id"
+          :class="{ active: imgIdx === idx }"
+          @click="handleMenuActive(idx)"
+        >
           {{ idx + 1 }}
         </a>
       </nav>

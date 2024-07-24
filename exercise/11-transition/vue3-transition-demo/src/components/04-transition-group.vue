@@ -21,9 +21,9 @@ const handleMenuActive = (idx) => {
   <div class="transition-group-page">
     <div class="content">
       <div class="mid">
-        <transition-group name="slids">
+        <transition name="slids">
           <img v-for="(item, idx) in slidList" v-show="imgIdx === idx" :key="item.id" :src="item.src" />
-        </transition-group>
+        </transition>
       </div>
       <nav class="nav_menu">
         <a

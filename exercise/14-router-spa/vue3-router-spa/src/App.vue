@@ -3,8 +3,7 @@
 <template>
   <div class="_mid flex-center">
     <div class="flex-center menu"></div>
-    <!-- page view -->
-    <RouterView />
+    <!-- page router view -->
   </div>
 </template>
 

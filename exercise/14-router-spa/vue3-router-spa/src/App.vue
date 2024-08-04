@@ -3,9 +3,9 @@
 <template>
   <div class="_mid flex-center">
     <div class="flex-center menu"></div>
+    <!-- page view -->
+    <RouterView />
   </div>
-
-  <!-- page view -->
 </template>
 
 <style>

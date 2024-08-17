@@ -1,50 +1,26 @@
-<script setup>
-import { onMounted, ref, watch } from "vue";
-import { useI18n } from "vue-i18n";
-
-const { t, locale } = useI18n();
-
-const name = ref("Mike");
-
-const print = ref(9527);
-
-const dayNum = ref(6);
-
-watch(locale, (newlocale) => {
-  localStorage.setItem("locale", newlocale);
-});
-
-onMounted(() => {
-  console.log(t("cancel"));
-  console.log(t("email"));
-  console.log(t("date"));
-  console.log(t("subject"));
-  console.log(t("message"));
-  console.log(t("upload"));
-});
-</script>
+<script setup></script>
 
 <template>
   <div class="content">
     <nav>
-      <select v-model="locale">
+      <select>
         <option>zh-TW</option>
         <option>en-US</option>
         <option>ja-JP</option>
       </select>
     </nav>
-    <p>{{ $t("cancel") }}</p>
-    <p>{{ $t("email") }}</p>
-    <p>{{ $t("date") }}</p>
-    <p>{{ $t("subject") }}</p>
-    <p>{{ $t("message") }}</p>
-    <p>{{ $t("upload") }}</p>
+    <p>取消</p>
+    <p>Email信箱</p>
+    <p>日期</p>
+    <p>標題</p>
+    <p>訊息內容</p>
+    <p>上傳</p>
     <div>
       <!-- 帶入參數填空 { 物件 } -->
-      <p>{{ $t("context", { name }) }}</p>
+      <p>大家好，我是{name}, 今天上的這堂課很有趣，我學到了很多東西。</p>
 
       <!-- 帶入參數填空 [ 陣列 ] -->
-      <p>{{ $t("getCount", [print, dayNum]) }}</p>
+      <p>你今天獲得了{0}個積分，你還有{1}天到期。</p>
     </div>
   </div>
 </template>
